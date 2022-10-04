@@ -1,0 +1,13 @@
+// IMPORTANT!!
+// Remove comments before use, comments are not valid JSON
+// Remove .example from the filename to use
+
+{
+  "default_user": "admin", // Used if no user specified
+  "default_pass": "pass", // Used if no pass specified
+  "conf_nodes": [
+    // List of conf nodes
+    { "user": "admin", "pass": "", "host": "10.0.0.138" },
+    { "user": "admin", "pass": "", "host": "10.0.0.140" }
+  ]
+}

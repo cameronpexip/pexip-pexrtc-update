@@ -41,7 +41,8 @@ for conf_node in config['conf_nodes']:
     sftp = ssh_client.open_sftp()
     sftp.put('pexrtc.js.gz', 'pexrtc.js.gz')
 
-    stdin, stdout, stderr = ssh_client.exec_command(command_list)
+    command_list_with_password = command_list.replace("$password", password)
+    stdin, stdout, stderr = ssh_client.exec_command(command_list_with_password)
 
     command_result_out = stdout.readlines()
     command_result_err = stderr.readlines()
